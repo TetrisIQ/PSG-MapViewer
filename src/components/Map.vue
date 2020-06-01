@@ -42,7 +42,7 @@ export default {
     }
   },
   created() {
-    ////this.timer = setInterval(this.fetchMap, 200);
+    this.timer = setInterval(this.fetchMap, 1000);
     this.fetchMap();
   }
 };

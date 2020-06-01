@@ -8,6 +8,12 @@
       />
     </div>
     <div v-else>
+      <div v-if="this.data.name == 'Asteroid'">
+        <Asteroid
+          :color="this.data.color"
+          :tooltip="'[' + this.coordinate.xcoordinate + '/' + this.coordinate.ycoordinate + '] ' + ' Asteroid'"
+        />
+      </div>
       <div v-if="this.data.name == 'SpaceStation'">
         <SpaceStation
           :color="this.data.color"
@@ -34,11 +40,12 @@
 import SpaceStation from "./Meeple/SpaceStation";
 import Starfighter from "./Meeple/Starfighter";
 import Transporter from "./Meeple/Transporter";
+import Asteroid from "./Meeple/Asteroid";
 
 export default {
   name: "field",
   props: ["data", "coordinate"],
-  components: { SpaceStation, Starfighter, Transporter },
+  components: { SpaceStation, Starfighter, Transporter, Asteroid },
   methods: {
     createHoverText() {
       return (
