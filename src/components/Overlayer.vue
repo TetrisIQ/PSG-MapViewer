@@ -18,7 +18,7 @@ export default {
       document.getElementById("overlayer").classList.add("hidden");
     },
     show() {
-      setTimeout(this.disapear, 1500);
+      setTimeout(this.disapear, 2000);
 
       document.getElementById("overlayer").classList.remove("hidden");
     }
